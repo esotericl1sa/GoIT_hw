@@ -3,7 +3,7 @@ from random import sample
 
 def get_numbers_ticket(min_int, max_int, quantity):
     # Check for invalid arguments
-    if min_int < 1 or max_int > 1000 or min_int > max_int or quantity <= 0 or quantity > (max_int - min_int + 1):
+    if not 1 <= min_int < max_int <= 1000:
         return []
 
     # Return a list of unique random integers using sample() method
